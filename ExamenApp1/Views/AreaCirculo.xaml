@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:ExamenApp1.ViewModels"
+             xmlns:Models="clr-namespace:ExamenApp1.Models"
+             x:Class="ExamenApp1.Views.AreaCirculo"
+             x:DataType="ViewModels:AreaCirculoViewModel"
+             Title="Area de un Circulo"
+             Background="White">
+    <VerticalStackLayout>
+        <Label 
+            Padding="20"
+            Text="Calcular el area de un circulo!"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            TextColor="DarkBlue"
+            />
+        <Label Text="Ingrese el radio del circulo:" FontSize="20" Padding="20" TextColor="#000000"/>
+        <Entry Text="{Binding Radio}" FontSize="20" Margin="20,0,20,0" Keyboard="Numeric" BackgroundColor="#198754"/>
+
+        <Label Text="Resultado:" FontSize="20" Padding="20" TextColor="#000000"/>
+        <Entry Text="{Binding Resultado}" FontSize="20" Margin="20,0,20,0" Keyboard="Numeric" BackgroundColor="#198754" IsReadOnly="True"/>
+
+        <Button Text="Calcular" Command="{Binding CalcularCirculoCommand}" Margin="20" TextColor="White" FontSize="Medium" Background="Black"/>
+        <Button Text="Limpiar" Command="{Binding LimpiarCommand}" Margin="20" TextColor="White" FontSize="Medium" Background="Black"/>
+    </VerticalStackLayout>
+</ContentPage>
