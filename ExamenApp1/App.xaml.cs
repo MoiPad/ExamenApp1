@@ -1,4 +1,6 @@
-﻿namespace ExamenApp1
+﻿using ExamenApp1.Views;
+
+namespace ExamenApp1
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage( new ExamenApp1MainPage());
         }
     }
 }
